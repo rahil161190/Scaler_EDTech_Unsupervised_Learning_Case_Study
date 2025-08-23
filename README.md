@@ -1,4 +1,4 @@
-# 🚀 Scaler Learner Profiling — Unsupervised learning Case Study
+# 🚀 Scaler Learner Profiling — Unsupervised Learning Case Study
 
 Welcome to the **Scaler Learner Profiling Case Study** repo!  
 This project showcases my end-to-end problem-solving as a Data Scientist, tackling a real-world business problem using **unsupervised learning techniques** and robust data analysis methods.
@@ -74,21 +74,12 @@ The end-to-end pipeline includes:
 
 ---
 
-## 🗂️ How to Explore This Repo
-
-- **`Scaler_Case_Study-Rahil.ipynb`**: Full analysis, code, commentary, and recommendations — ready for recruiters and technical peers alike!  
-- **PDFs**: Problem statement and official hints — to help you understand the context.  
-- **README.md** (this file): Use as your one-stop executive summary!  
-
----
-
 ## 👨💻 Technologies Used
 
 - Python (`pandas`, `numpy`, `scikit-learn`, `seaborn`, `matplotlib`, `umap-learn`)  
 - Jupyter Notebook  
 
 ---
-
 
 Let’s connect on LinkedIn to discuss this further, or explore my other **data science projects**.
 Linkedin Link - [www.linkedin.com/in/rahil-qureshi-453a10123](https://www.linkedin.com/in/rahil-qureshi-453a10123/)]
