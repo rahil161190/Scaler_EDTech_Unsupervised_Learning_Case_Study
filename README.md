@@ -1,4 +1,4 @@
-# 🚀 Scaler Learner Profiling — Unsupervised Learning Case Study
+# 🚀 Scaler Learner Profiling — Unsupervised Learning 
 
 Welcome to the **Scaler Learner Profiling Case Study** repo!  
 This project showcases my end-to-end problem-solving as a Data Scientist, tackling a real-world business problem using **unsupervised learning techniques** and robust data analysis methods.
