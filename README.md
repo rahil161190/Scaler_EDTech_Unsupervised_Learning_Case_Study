@@ -1,169 +1,115 @@
-# 🎯 Scaler EdTech Customer Clustering Analysis
+🚀 Scaler Learner Profiling — Clustering Case Study
+Welcome to the Scaler Learner Profiling Case Study repo!
+This project showcases my end-to-end problem-solving as a Data Scientist, tackling a real-world business problem using unsupervised learning techniques and robust data analysis methods.
 
-## 📊 Project Overview
+📚 Problem Statement
+Scaler, a leading tech-versity, aims to deliver a world-class, personalized learning experience for professionals across the tech spectrum.
+A big challenge? Understanding the backgrounds of thousands of learners — their job roles, companies, and experience levels — to tailor content, improve retention, and deliver targeted mentoring.
 
-This project presents a comprehensive **unsupervised machine learning solution** for customer segmentation in the EdTech industry. Using advanced clustering algorithms, I analyzed customer behavior patterns to identify distinct user groups, enabling data-driven marketing strategies and personalized user experiences.
+Goal:
+Cluster learners based on profile data (roles, companies, experience, compensation) for more effective learner and company profiling, enabling Scaler to:
 
-## 🎯 Business Problem
+Design customized learning paths and recommendations
 
-**Challenge**: EdTech companies need to understand their diverse customer base to:
-- Optimize marketing campaigns
-- Personalize learning experiences  
-- Improve customer retention
-- Maximize revenue through targeted strategies
+Support targeted mentoring and career guidance
 
-**Solution**: Implemented K-means clustering to segment customers based on engagement patterns, course preferences, and behavioral metrics.
+Recognize top workplaces and trending job roles within the tech ecosystem
 
-## 🔧 Technical Implementation
+🔍 Methodology & Approach
+The end-to-end pipeline includes:
 
-### Technologies Used
-- **Python 3.8+**
-- **Pandas** - Data manipulation and analysis
-- **NumPy** - Numerical computing
-- **Scikit-learn** - Machine learning algorithms
-- **Matplotlib & Seaborn** - Data visualization
-- **Jupyter Notebook** - Interactive development
+Exploratory Data Analysis (EDA):
 
-### Machine Learning Techniques
-- **K-means Clustering** - Primary segmentation algorithm
-- **Elbow Method** - Optimal cluster determination
-- **Silhouette Analysis** - Cluster quality validation
-- **Principal Component Analysis (PCA)** - Dimensionality reduction
-- **Feature Scaling** - StandardScaler normalization
+Data cleaning, summary stats, visualizations
 
-## 📈 Key Findings & Business Impact
+Outlier analysis, distribution checks, missing value imputation, regex text cleaning
 
-### Customer Segments Identified:
-1. **High-Value Learners** (25%)
-   - High course completion rates
-   - Premium subscription holders
-   - Active community participants
+Feature Engineering:
 
-2. **Casual Browsers** (40%)
-   - Low engagement metrics
-   - Free tier users
-   - Opportunity for conversion campaigns
+Years of experience calculation, converting CTC to lakhs per annum
 
-3. **Course Collectors** (20%)
-   - Purchase multiple courses
-   - Low completion rates
-   - Need engagement improvement strategies
+Aggregated medians and flags (“Designation”, “Class”, “Tier”) for relative compensation across company/job/experience
 
-4. **Mobile-First Users** (15%)
-   - Primarily mobile platform users
-   - Short session durations
-   - Require mobile-optimized content
+Manual Segmentation & Clustering:
 
-### Business Recommendations:
-- **Targeted Marketing**: 23% increase in conversion rates through personalized campaigns
-- **Retention Strategy**: Identified at-risk customers for proactive intervention
-- **Product Development**: Mobile-first features for 15% of user base
+Multi-level flags to compare each learner’s CTC against relevant peer groups
 
-## 🗂️ Project Structure
+Understand company- and job-based compensation dynamics
 
-```
-Scaler_EDTech_Clustering_Case_Study/
-│
-├── Scaler_Case_Study-Rahil.ipynb    # Main analysis notebook
-├── README.md                         # Project documentation
-├── data/                            # Dataset directory
-│   ├── raw/                        # Original dataset
-│   └── processed/                  # Cleaned dataset
-├── src/                            # Source code modules
-│   ├── data_preprocessing.py       # Data cleaning functions
-│   ├── clustering_models.py        # ML model implementations
-│   └── visualization.py            # Plotting utilities
-├── results/                        # Output directory
-│   ├── plots/                     # Generated visualizations
-│   └── models/                    # Saved model files
-└── requirements.txt               # Dependencies
-```
+Unsupervised Clustering:
 
-## 🚀 How to Run
+KMeans and GMM applied to engineered features (with optimal cluster selection via Elbow method)
 
-### Prerequisites
-```bash
-# Clone the repository
-git clone https://github.com/rahil161190/Scaler_EDTech_Clustering_Case_Study.git
-cd Scaler_EDTech_Clustering_Case_Study
+Cluster interpretability using PCA/UMAP and scaled feature analysis
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+Cluster Insights & Recommendations:
 
-# Install dependencies
-pip install -r requirements.txt
-```
+In-depth analysis of cluster characteristics (identifying high, average, and low earners)
 
-### Running the Analysis
-```bash
-# Launch Jupyter Notebook
-jupyter notebook
+Actionable findings for business strategy, learner support, and product personalization
 
-# Open and run: Scaler_Case_Study-Rahil.ipynb
-```
+💡 Key Results & Insights
+Strong validation of feature engineering:
+Clustering algorithms (KMeans, GMM) closely matched manually-created compensation tiers, underlining the power of the “relative CTC” flag methodology.
 
-## 📊 Key Visualizations
+Distinct segments discovered:
 
-- **Cluster Distribution**: Customer segment proportions
-- **Feature Importance**: Variables driving segmentation
-- **Silhouette Analysis**: Cluster quality metrics
-- **PCA Visualization**: 2D cluster representation
-- **Business Metrics Dashboard**: ROI and engagement insights
+Cluster 1: High earners with significant experience — leadership/advanced IC roles in top-paying companies
 
-## 🎯 Skills Demonstrated
+Cluster 2: Average earners, median experience
 
-### Data Science & Analytics
-- ✅ **Unsupervised Learning**: K-means clustering implementation
-- ✅ **Feature Engineering**: Creating meaningful customer metrics
-- ✅ **Data Visualization**: Clear, actionable business insights
-- ✅ **Statistical Analysis**: Hypothesis testing and validation
+Cluster 3: Early-career or lower-compensated learners, often in more populous companies/roles
 
-### Business Intelligence
-- ✅ **Customer Segmentation**: Market analysis and targeting
-- ✅ **Strategic Recommendations**: Data-driven business decisions
-- ✅ **ROI Analysis**: Quantifying business impact
-- ✅ **Stakeholder Communication**: Technical to business translation
+Notable findings:
 
-### Technical Proficiency
-- ✅ **Python Programming**: Clean, efficient, well-documented code
-- ✅ **Machine Learning**: Model selection and optimization
-- ✅ **Data Engineering**: ETL processes and data quality
-- ✅ **Version Control**: Git best practices
+Backend and Fullstack Engineer roles dominate, but there is high variance in CTC even among similar roles
 
-## 📈 Results & Impact
+Company “tier” frequency correlates with compensation clusters — crowding in Tier 3 by popular companies and entry-level positions
 
-| Metric | Before Analysis | After Implementation | Improvement |
-|--------|----------------|---------------------|-------------|
-| Marketing ROI | 2.1x | 3.2x | **+52%** |
-| Customer Retention | 68% | 84% | **+16pp** |
-| Conversion Rate | 4.2% | 6.8% | **+62%** |
-| User Engagement | 45% | 67% | **+49%** |
+Years of experience do not guarantee higher CTC; key outliers are highlighted
 
-## 🔮 Future Enhancements
+Entry-level roles like “Support Engineer” can have outliers with unusually high CTCs
 
-- **Real-time Clustering**: Implement streaming algorithms for live segmentation
-- **Deep Learning**: Neural networks for complex pattern recognition
-- **A/B Testing Framework**: Systematic campaign optimization
-- **Predictive Analytics**: Customer lifetime value modeling
-- **Dashboard Development**: Interactive business intelligence platform
+Business-ready recommendations:
 
-## 🤝 Connect & Collaborate
+Use clustering results to develop career tracks, peer comparison dashboards, and company/role benchmarking for learners
 
-**Looking for Data Science opportunities?** This project demonstrates my ability to:
-- Transform business problems into analytical solutions
-- Deliver measurable business impact through data science
-- Communicate complex findings to stakeholders
-- Build scalable, production-ready ML systems
+Guide content and mentorship programs for mid/low-tier clusters to elevate retention and satisfaction
 
-### Let's Connect!
-- 📧 **Email**: [rahil161190@gmail.com](mailto:rahil161190@gmail.com)
-- 💼 **LinkedIn**: [linkedin.com/in/rahil-shaikh](https://linkedin.com/in/rahil-shaikh)
-- 🐱 **GitHub**: [github.com/rahil161190](https://github.com/rahil161190)
-- 📊 **Portfolio**: [View More Projects](https://github.com/rahil161190?tab=repositories)
+📈 Project Highlights
+230K+ data points processed, all steps clearly documented in Jupyter Notebook
 
----
+Both manual and model-based clustering approaches for robust profiling
 
-⭐ **If this project helped you or you found it interesting, please give it a star!** ⭐
+Rich visualizations — EDA plots, Elbow method, cluster projections (PCA/UMAP)
 
-*This project showcases advanced analytics capabilities and business acumen - perfect for data science, analytics, and business intelligence roles.*
+Insightful commentary after every major step
+
+🗂️ How to Explore This Repo
+scaler-case-study-rahil.ipynb:
+Full analysis, code, commentary, and recommendations — ready for recruiters and technical peers alike!
+
+PDFs:
+Problem statement and official hints — to help you understand the context.
+
+README.md (this file):
+Use as your one-stop executive summary!
+
+👨💻 Technologies Used
+Python (pandas, numpy, scikit-learn, seaborn, matplotlib, umap-learn)
+
+Jupyter Notebook
+
+📢 Why Should You Care?
+This project demonstrates:
+
+Practical consulting-style data wrangling, analysis, and machine learning
+
+Strong communicative insights — perfect for business and technical audiences
+
+The kind of real-life impact modern data science can make on product personalization, user retention, and business intelligence
+
+Curious to know more? Dive into the notebook and see how data science can drive smarter decisions at the intersection of tech, learning, and careers!
+
+Let’s connect on LinkedIn to discuss this further, or explore my other [data science projects]!
+
