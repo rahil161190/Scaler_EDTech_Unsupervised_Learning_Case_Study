@@ -18,6 +18,18 @@ Cluster learners based on profile data (roles, companies, experience, compensati
 - Recognize top workplaces and trending job roles within the tech ecosystem  
 
 ---
+Dataset Explanation:
+1. Unnamed 0: The index of the dataset.
+2. Email_hash: An anonymized identifier representing the email of the learner.
+3. Company_hash: An anonymized identifier indicating the current employer of the
+learner.
+4. orgyear: Represents the year the learner began employment at the current
+company.
+5. CTC: Current Compensation to the Company (CTC) of the learner.
+6. Job_position: Represents the job profile or role of the learner within their
+company.
+7. CTC_updated_year: The year in which the learner's CTC was most recently
+updated. This could be due to yearly increments, promotions, or other factors.
 
 ## 🔍 Methodology & Approach
 
